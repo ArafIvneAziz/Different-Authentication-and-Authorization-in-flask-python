@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\yamin\projects\Face-Recognition\build\CMakeFiles\b3d472f4154ea8af5241e3229310188e\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F48F6BDE-7BC4-39C9-A518-6B26FCEE8F30}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

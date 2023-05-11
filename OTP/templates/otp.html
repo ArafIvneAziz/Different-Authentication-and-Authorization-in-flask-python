@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OTP Authentication</title>
+  </head>
+  <body>
+    <h1>OTP Authentication</h1>
+    {% if error %}
+    <div style="color: red;">{{ error }}</div>
+    {% endif %}
+    <form method="POST">
+      <label for="otp">OTP:</label>
+      <input type="number" id="otp" name="otp" required><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Face Recognition App</title>
+  </head>
+  <body>
+    <h1>Face Recognition App</h1>
+    <!-- <div id='video-stream'></div> -->
+    <form action='/face_registration' method='POST'>
+      <button type='submit'>Face Registration</button>
+    </form>
+    <form action='/face_login' method='POST'>
+      <button type='submit'>Face Login</button>
+    </form>
+    <script>
+      // const videoStream = document.getElementById('video-stream');
+
+      function startVideoStream() {
+        // Check if the browser supports the MediaDevices API
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          // Request access to the camera
+          navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(stream) {
+              // If access is granted, display the stream in a video element
+              var video = document.createElement('video');
+              video.srcObject = stream;
+              document.body.appendChild(video);
+              video.play();
+            })
+            .catch(function(error) {
+              // If access is denied, log an error message to the console
+              console.error('Error accessing camera:', error);
+            });
+        } else {
+          // If the browser does not support the MediaDevices API, log an error message to the console
+          console.error('getUserMedia not supported');
+        }
+      }
+
+      document.querySelector('form[action="/face_registration"]').addEventListener('submit', (event) => {
+        event.preventDefault();
+        startVideoStream();
+        setTimeout(() => {
+          event.target.submit();
+        }, 5000);
+      });
+
+      document.querySelector('form[action="/face_login"]').addEventListener('submit', (event) => {
+        event.preventDefault();
+        startVideoStream();
+        setTimeout(() => {
+          event.target.submit();
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>
